@@ -40,13 +40,16 @@ public class Slytherin extends Hogwarts{
                 "\nамбиции " + ambition;
     }
 
-    public boolean equals(Slytherin o) {
+    public void compare(Slytherin o) {
         int summThis = cunning + determination + ambition;
         int summO = o.cunning + o.determination + o.ambition;
-        if(summThis > summO){
-            return true;
-        }else{
-            return false;
+        if (summThis > summO) {
+            System.out.println(this.getNameStudent() + " лучший Слизеринце чем " + o.getNameStudent());
+        } else if (summThis < summO) {
+            System.out.println(o.getNameStudent() + " лучший Слизеринце чем " + this.getNameStudent());
+        } else {
+            System.out.println("Очки раны поэтмоу студенты считаются равными");
         }
     }
+
 }

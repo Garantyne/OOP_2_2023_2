@@ -72,13 +72,16 @@ public class Hogwarts {
     }
 
 
-    public boolean equals(Hogwarts o) {
+    public void compare(Hogwarts o) {
         int summThis = magicPower + transgress;
         int summO = o.magicPower + o.transgress;
+
         if (summThis > summO) {
-            return true;
+                System.out.println(this.getNameStudent() + " лучший студент чем " + o.getNameStudent());
+        } else if (summThis < summO) {
+                System.out.println(o.getNameStudent() + " лучший студент чем " + this.getNameStudent());
         } else {
-            return false;
+                System.out.println("Очки раны поэтмоу студенты считаются равными");
         }
     }
 }

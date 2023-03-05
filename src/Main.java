@@ -11,16 +11,9 @@ public class Main {
         Gryffindor ron = new Gryffindor("Рон Уизли",12,10,20,40,40,40);
         System.out.println(garry.toString());
 
-        if(garry.equals(ron)){
-            System.out.println("Гарри лучший гриффиндорец чем Рон");
-        }else{
-            System.out.println("Рон лучший гриффиндорец чем Гарри");
-        }
+        garry.compare(ron);
+        garry.compare(malf);
 
-        if(garry.equals(malf)){
-            System.out.println("Гарри сильнее чем Малфой");
-        }else{
-            System.out.println("Малфой сильнее чем Гарри");
-        }
+
     }
 }

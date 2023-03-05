@@ -1,13 +1,13 @@
 import java.util.Objects;
 
-public class Gryffindor extends Hogwarts{
+public class Gryffindor extends Hogwarts {
     private int nobility;
     private int honor;
     private int bravery;
 
 
     public Gryffindor(String nameStudent, int age, int magicPower, int transgress,
-                      int nobility, int honor, int bravery){
+                      int nobility, int honor, int bravery) {
         super(nameStudent, age, magicPower, transgress);
         this.nobility = nobility;
         this.honor = honor;
@@ -40,17 +40,21 @@ public class Gryffindor extends Hogwarts{
 
     @Override
     public String toString() {
-        return "Факультет Гриффиндор! " + super.toString() +"\nБлагородство " + nobility + "\nчесть " + honor +
+        return "Факультет Гриффиндор! " + super.toString() + "\nБлагородство " + nobility + "\nчесть " + honor +
                 "\nсмелость " + bravery;
     }
 
-    public boolean equals(Gryffindor o) {
+    public void compare(Gryffindor o) {
         int summThis = nobility + honor + bravery;
         int summO = o.bravery + o.honor + o.nobility;
-        if(summThis > summO){
-            return true;
-        }else{
-            return false;
+        if (summThis > summO) {
+            if (summThis > summO) {
+                System.out.println(this.getNameStudent() + " лучший Гриффиндорец чем " + o.getNameStudent());
+            } else if (summThis < summO) {
+                System.out.println(o.getNameStudent() + " лучший Гриффиндорец чем " + this.getNameStudent());
+            } else {
+                System.out.println("Очки раны поэтмоу студенты считаются равными");
+            }
         }
     }
 }

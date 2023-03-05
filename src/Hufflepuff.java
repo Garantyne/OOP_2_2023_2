@@ -40,13 +40,17 @@ public class Hufflepuff extends Hogwarts{
                 "\nчестность " + honest;
     }
 
-    public boolean equals(Hufflepuff o) {
+    public void compare(Hufflepuff o) {
         int summThis = hardworking + loyal + honest;
         int summO = o.hardworking + o.loyal + o.honest;
-        if(summThis > summO){
-            return true;
-        }else{
-            return false;
+        if (summThis > summO) {
+            if (summThis > summO) {
+                System.out.println(this.getNameStudent() + " лучший Пуффендуец чем " + o.getNameStudent());
+            } else if (summThis < summO) {
+                System.out.println(o.getNameStudent() + " лучший Пуффендуец чем " + this.getNameStudent());
+            } else {
+                System.out.println("Очки раны поэтмоу студенты считаются равными");
+            }
         }
     }
 }

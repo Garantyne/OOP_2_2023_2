@@ -1,10 +1,10 @@
-public class Ravenclaw extends Hogwarts{
+public class Ravenclaw extends Hogwarts {
     private int smart;
     private int wise;
     private int witty;
 
     public Ravenclaw(String nameStudent, int age, int magicPower, int transgress,
-                     int smart, int wise, int witty){
+                     int smart, int wise, int witty) {
         super(nameStudent, age, magicPower, transgress);
         this.smart = smart;
         this.wise = wise;
@@ -36,17 +36,21 @@ public class Ravenclaw extends Hogwarts{
     }
 
     public String toString() {
-        return "Факультет Когтевран! " + super.toString() +"\nУм " + smart + "\nмудрость " + wise +
+        return "Факультет Когтевран! " + super.toString() + "\nУм " + smart + "\nмудрость " + wise +
                 "\nостроумие " + witty;
     }
 
-    public boolean equals(Ravenclaw o) {
+    public void compare(Ravenclaw o) {
         int summThis = smart + wise + witty;
         int summO = o.smart + o.wise + o.witty;
-        if(summThis > summO){
-            return true;
-        }else{
-            return false;
+        if (summThis > summO) {
+            if (summThis > summO) {
+                System.out.println(this.getNameStudent() + " лучший Когтевранец чем " + o.getNameStudent());
+            } else if (summThis < summO) {
+                System.out.println(o.getNameStudent() + " лучший Когтевранец чем " + this.getNameStudent());
+            } else {
+                System.out.println("Очки раны поэтмоу студенты считаются равными");
+            }
         }
     }
 }
